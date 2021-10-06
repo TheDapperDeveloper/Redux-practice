@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch} from 'react-redux'
 import "../styled-components/HeaderStyle.js"
 import { HeaderContainer } from '../styled-components/HeaderStyle.js'
+import { RecipeButton } from '../styled-components/HeaderStyle.js'
 import { recipeData } from "../components/Recipe";
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
     
     return (
         <HeaderContainer>
-            <button onClick= {() => dispatch({type: "GET_RECIPES", payload:[recipeData]})}>Recipes</button>
+            <RecipeButton onClick= {() => dispatch({type: "GET_RECIPES", payload:recipeData})}>Recipes</RecipeButton>
            
 
         </HeaderContainer>

@@ -1,4 +1,4 @@
-.card-container {
+.main-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -7,8 +7,20 @@
 
 .recipe-card {
   text-align: center;
-  background-color: blueviolet;
+  background-color: #fea500;
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
+  width: 300px;
+  height: 400px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+h1,
+p {
+  color: #553bd0;
 }

@@ -1,16 +1,16 @@
 import React from 'react'
 import "../styled-components/CardContainer.css"
-import { useSelector } from "react-redux";
 
 
-export default function Cards() {
-    const recipe = useSelector((state) => state.recipe)
+export default function Cards(props) {
+    console.log(props)
+    
  
     return (
         <div className="recipe-card">
-            <h1>{recipe.name}</h1>
-
-            
+            <h1>{props.menu.name} </h1>
+            <img src={props.menu.image} alt="" />
+            <p>{props.menu.description}</p>
         </div>
     )
 }

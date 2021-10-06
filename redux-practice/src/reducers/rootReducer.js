@@ -1,7 +1,7 @@
-import { recipeData } from "../components/Recipe";
+
 
 const initialState = {
-  recipe: []
+  recipes:[]
 }
 
 console.log(initialState)
@@ -11,7 +11,7 @@ const rootReducer = (state = initialState, action) => {
     // compare that value to a list of criteria
     // those criteria are called cases
     case "GET_RECIPES":
-      return {...state, recipe:action.payload}
+      return {...state, recipes:action.payload}
     
     default:
       return state;
