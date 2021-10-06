@@ -2,13 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./reducers/rootReducer";
+import logger from "redux-logger"
 
-const reduxDevTools =
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
-const store = createStore(rootReducer, reduxDevTools);
+const store = createStore(rootReducer, applyMiddleware(logger));
 ReactDOM.render(
   <React.StrictMode>
     {/* Wrap our app in our provider */}

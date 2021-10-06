@@ -1,12 +1,17 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch} from 'react-redux'
+import "../styled-components/HeaderStyle.js"
+import { HeaderContainer } from '../styled-components/HeaderStyle.js'
+import { recipeData } from "../components/Recipe";
 
-export default function Header(props) {
-    const dispatch = useDispatch
+export default function Header() {
+    const dispatch = useDispatch()
+    
     return (
-        <div>
-            <button onClick= {() => dispatch({type: "GET_RECIPES"})}>Recipes</button>
+        <HeaderContainer>
+            <button onClick= {() => dispatch({type: "GET_RECIPES", payload:[recipeData]})}>Recipes</button>
+           
 
-        </div>
+        </HeaderContainer>
     )
 }
